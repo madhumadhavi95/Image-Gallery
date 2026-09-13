@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Creative Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">📸 Gallery</div>
+
+        <button id="themeBtn">🌙</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore Our <span>Image Gallery</span></h1>
+        <p>Discover beautiful moments from nature, cities and wildlife.</p>
+    </section>
+
+    <!-- Search -->
+    <div class="search-box">
+        <input type="text" id="searchInput"
+               placeholder="🔍 Search images...">
+    </div>
+
+    <!-- Categories -->
+    <div class="filters">
+        <button class="active" onclick="filterImages('all', this)">
+            All
+        </button>
+
+        <button onclick="filterImages('nature', this)">
+            🌿 Nature
+        </button>
+
+        <button onclick="filterImages('city', this)">
+            🏙️ City
+        </button>
+
+        <button onclick="filterImages('animals', this)">
+            🐾 Animals
+        </button>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+
+        <div class="card" data-category="nature"
+             data-name="Mountain Sunset">
+
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+                 alt="Mountain Sunset">
+
+            <div class="caption">
+                <h3>Mountain Sunset</h3>
+                <p>Beautiful nature</p>
+            </div>
+        </div>
+
+
+        <div class="card" data-category="city"
+             data-name="City Skyline">
+
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df"
+                 alt="City Skyline">
+
+            <div class="caption">
+                <h3>City Skyline</h3>
+                <p>Modern city</p>
+            </div>
+        </div>
+
+
+        <div class="card" data-category="animals"
+             data-name="Golden Dog">
+
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d"
+                 alt="Golden Dog">
+
+            <div class="caption">
+                <h3>Golden Dog</h3>
+                <p>Lovely animal</p>
+            </div>
+        </div>
+
+
+        <div class="card" data-category="nature"
+             data-name="Forest">
+
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+                 alt="Forest">
+
+            <div class="caption">
+                <h3>Green Forest</h3>
+                <p>Peaceful nature</p>
+            </div>
+        </div>
+
+
+        <div class="card" data-category="city"
+             data-name="City Street">
+
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000"
+                 alt="City Street">
+
+            <div class="caption">
+                <h3>City Street</h3>
+                <p>Urban life</p>
+            </div>
+        </div>
+
+
+        <div class="card" data-category="animals"
+             data-name="Black Dog">
+
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a"
+                 alt="Black Dog">
+
+            <div class="caption">
+                <h3>Black Dog</h3>
+                <p>Beautiful pet</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p id="noResults">No images found 😔</p>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+
+        <button class="close" onclick="closeLightbox()">×</button>
+
+        <button class="nav prev" onclick="changeImage(-1)">
+            ❮
+        </button>
+
+        <div class="lightbox-content">
+
+            <img id="lightboxImage">
+
+            <h2 id="lightboxTitle"></h2>
+
+            <p id="counter"></p>
+
+        </div>
+
+        <button class="nav next" onclick="changeImage(1)">
+            ❯
+        </button>
+
+    </div>
+
+
+    <footer>
+        <p>© 2026 Creative Image Gallery | Designed with HTML, CSS & JavaScript</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
